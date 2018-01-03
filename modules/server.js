@@ -1,13 +1,12 @@
 var http = require('http');
 var colors = require('colors');
-
 var handlers = require('./handlers');
 
 
 function start() {
   function onRequest(request, response) {
-    console.log("Odebrano zapytanie.");
-    console.log("Zapytanie " + request.url + " odebrane.");
+    console.log("Odebrano zapytanie.".green);
+    console.log("Zapytanie ".blue + request.url + " odebrane.".blue);
 
     response.writeHead(200, {"Content-Type": "text/plain; charset=utf-8"});
 
